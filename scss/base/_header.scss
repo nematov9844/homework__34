@@ -1,0 +1,122 @@
+.header{
+    width: 100%;
+    background-color: rgba(93, 93, 93, 0.411);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    color: white;
+    &__navbar{
+        position: relative;
+        margin: 0 auto;
+    }
+    &__action{
+        position: absolute;
+        width: 50%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -200%;
+        right: -10%;
+        transition: 0.7s;
+    }
+    &__navbar.toggle{
+        .header__action{
+            top: 0;
+            .header__auth{
+                font-size: 16px;
+                font-weight: bold;
+                
+            }
+        }
+    }
+    &__link{
+        color: inherit;
+        font-size: 16px ;
+        font-weight: 400;
+    }
+    &__auth{
+        color: inherit;
+        font-weight: 300;
+        background: transparent;
+        font-weight: 400;
+        line-height: 50px;
+        border: none;
+    }
+    &__list.toggle{
+            left: 60%;
+            display: flex;
+        .header__link{
+            color: navy;
+            font-weight: bold;
+        }
+        }
+    &__list{
+        position: absolute;
+        display: flex;
+        gap: 20px;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        font-weight: 300;
+        background-color: rgba(0, 0, 0, 0.304);
+        transition: 1s;
+    }
+    &__logo{
+        a{
+            color:white;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+    &__toggle{
+        background: transparent;
+        border: none;
+        font-size: 24px;
+    }    
+
+}
+
+@media (min-width:568px) {
+    .header{
+        &__list.toggle{
+            position: static;
+            display: flex;
+        }
+        &__logo{
+        a{
+          font-size: larger;
+        }
+        }
+        &__toggle{
+            display: none;
+        }
+        &__action{
+            position: sticky;
+            display: flex;
+            width: auto;
+            height: auto;
+        }
+        &__list{
+            position: sticky;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            background-color: transparent;
+            box-shadow: none;
+        }
+       &__auth{
+        font-size: 22px;
+       }
+       &__link{
+        font-size: 22px;
+       }
+    }
+    
+}

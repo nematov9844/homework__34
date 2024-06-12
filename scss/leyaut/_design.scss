@@ -1,0 +1,62 @@
+
+
+.design{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 50px 20px;
+    &__title{
+        font-size: 25px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    &__desc{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 15.5px;
+      } 
+      &__info{
+   font-size: 14px;
+        font-weight: 400;
+        line-height: 15.5px;
+      }
+      &__card__title{
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 30px;
+        color: black;
+      }
+      &__card__desc{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15.5px;
+        color: black;
+
+      }
+      &__cards{
+        display: grid;
+        grid-template-columns: repeat(1fr 1fr);
+        gap: 30px;
+      }
+      &__card{
+        width: 100%;
+        display: grid;
+        gap: 15px;
+      }
+      &__card__img{
+        width: 100%;
+      }
+    
+}
+
+@media (min-width:700px) {
+    .design{
+        &__cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   
+        gap: 20px;
+          }
+    }
+    
+}

@@ -1,0 +1,58 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: black;
+    &__left{
+        display: flex;
+        padding-top: 100px;
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    &__title{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+    &__desc{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: justify;
+    }
+    &__bad{
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        position: absolute;
+        top: 7%;
+        right: 1.7%;
+    }
+    &__title__text{
+        font-size: 22px;
+    }
+    &__desc__title{
+        font-size: 22px;
+    }
+    &__desc__desc{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:768px) {
+    .footer{
+        &__left{
+            display: flex;
+            flex-direction: row;
+        }
+        &__desc{
+            width: 350px;
+        }
+    }
+    
+}
